@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="alert alert-info">
+            <strong>Warning! </strong>All data is stored on client side which is lost when page is refreshed.
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Serial Number</th>
+                    <th scope="col">Name Field</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="big-data-table">
+
+            </tbody>
+        </table>
+        <!-- disappearing add button -->
+        <button class="btn btn-primary btn-block">Add a row</button>
+        <!-- disappearing form to add at bottom of table-->
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Enter Name</h5>
+                <form id="Main-Form">
+                    <p class="card-text"><input type="text" placeholder="Your name" name="NameFeild"></p>
+                    <button type="submit" class="btn btn-success card-link ">okay</button>
+                    <button type="reset" class="btn btn-info card-link ">cancel</button>
+                </form>
+            </div>
+        </div>
+        <!-- disappearing form to update in same row-->
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Update Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Under constriction</h6>
+                <form id="Main-Form2">
+                    <p class="card-text"><input type="text" placeholder="Your name" name="NameFeild"></p>
+                    <button type="submit" class="btn btn-success card-link ">okay</button>
+                    <button type="reset" class="btn btn-info card-link ">cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
