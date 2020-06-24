@@ -28,9 +28,9 @@
             </tbody>
         </table>
         <!-- disappearing add button -->
-        <button class="btn btn-primary btn-block">Add a row</button>
+        <button class="btn btn-primary btn-block" onclick="showadd()">Add a row</button>
         <!-- disappearing form to add at bottom of table-->
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" id="addContainer" hidden>
             <div class="card-body">
                 <h5 class="card-title">Enter Name</h5>
                 <form id="Main-Form">
@@ -41,14 +41,15 @@
             </div>
         </div>
         <!-- disappearing form to update in same row-->
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" id="updateContainer" hidden>
             <div class="card-body">
                 <h5 class="card-title">Update Name</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Under constriction</h6>
                 <form id="Main-Form2">
                     <p class="card-text"><input type="text" placeholder="Your name" name="NameFeild"></p>
-                    <button type="submit" class="btn btn-success card-link ">okay</button>
-                    <button type="reset" class="btn btn-info card-link ">cancel</button>
+                    <input type="hidden" name="location">
+                    <button type="submit" class="btn btn-success card-link">okay</button>
+                    <button type="reset" class="btn btn-info card-link">cancel</button>
                 </form>
             </div>
         </div>
