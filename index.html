@@ -7,6 +7,7 @@
     <title>Welcome</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 
 <body>
@@ -28,15 +29,15 @@
             </tbody>
         </table>
         <!-- disappearing add button -->
-        <button class="btn btn-primary btn-block" onclick="showadd()">Add a row</button>
+        <button class="btn btn-primary btn-block" onclick="showadd()"><i class="fas fa-plus"></i> Add a row</button>
         <!-- disappearing form to add at bottom of table-->
         <div class="card" style="width: 18rem;" id="addContainer" hidden>
             <div class="card-body">
                 <h5 class="card-title">Enter Name</h5>
                 <form id="Main-Form">
                     <p class="card-text"><input type="text" placeholder="Your name" name="NameFeild"></p>
-                    <button type="submit" class="btn btn-success card-link ">okay</button>
-                    <button type="reset" class="btn btn-info card-link ">cancel</button>
+                    <button type="submit" class="btn btn-success card-link "><i class="fas fa-thumbs-up"></i> okay</button>
+                    <button type="reset" onclick="hideAdd()" class="btn btn-info card-link "><i class="fas fa-window-close"></i> cancel</button>
                 </form>
             </div>
         </div>
@@ -48,8 +49,8 @@
                 <form id="Main-Form2">
                     <p class="card-text"><input type="text" placeholder="Your name" name="NameFeild"></p>
                     <input type="hidden" name="location">
-                    <button type="submit" class="btn btn-success card-link">okay</button>
-                    <button type="reset" class="btn btn-info card-link">cancel</button>
+                    <button type="submit" class="btn btn-success card-link"><i class="fas fa-thumbs-up"></i> okay</button>
+                    <button type="reset" onclick="hideUpdate()" class="btn btn-info card-link"><i class="fas fa-window-close"></i> cancel</button>
                 </form>
             </div>
         </div>

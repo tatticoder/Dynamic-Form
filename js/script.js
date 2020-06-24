@@ -22,12 +22,12 @@ function CreateFunction(name) {
     name +
     "','" +
     total_entries +
-    "')\" class='btn btn-success'>Update</button>";
+    "')\" class='btn btn-success'><i class='fa fa-edit'></i> Update</button>";
   cell4.innerHTML =
     "<button onclick='deleteFunction(" +
     total_entries +
-    ")' class='btn btn-danger'>Delete</button>";
-  document.getElementById("addContainer").setAttribute("hidden", true);
+    ")' class='btn btn-danger'><i class='fa fa-trash'></i> Delete</button>";
+  hideAdd();
   ++total_entries; //increment for next entry
 }
 //delete function
@@ -35,6 +35,12 @@ function deleteFunction(number) {
   document.getElementById("big-data-table").deleteRow(number);
   console.log("deleted " + number);
   update_rest_of_rows(number);
+}
+function hideAdd() {
+  document.getElementById("addContainer").setAttribute("hidden", true);
+}
+function hideUpdate() {
+  document.getElementById("updateContainer").setAttribute("hidden", true);
 }
 function showadd() {
   document.getElementById("addContainer").removeAttribute("hidden");
@@ -52,7 +58,7 @@ function updateForm(event) {
   event.preventDefault();
   var newName = document.getElementById("Main-Form2").elements[0].value;
   var loc = document.getElementById("Main-Form2").elements[1].value;
-  document.getElementById("updateContainer").setAttribute("hidden", true);
+  hideUpdate();
   console.log(newName + "  " + loc);
   document
     .getElementById("big-data-table")
@@ -62,7 +68,7 @@ function updateForm(event) {
     newName +
     "','" +
     loc +
-    "')\" class='btn btn-success'>Update</button>";
+    "')\" class='btn btn-success'><i class='fa fa-edit'></i> Update</button>";
 }
 form.addEventListener("submit", updateForm);
 
@@ -78,10 +84,11 @@ function update_rest_of_rows(i) {
       nameOfRow +
       "','" +
       Number(i + 1) +
-      "')\" class='btn btn-success'>Update</button>";
+      "')\" class='btn btn-success'><i class='fa fa-edit'></i> Update</button>";
     document.getElementById("big-data-table").rows.item(i).cells[3].innerHTML =
       "<button onclick='deleteFunction(" +
       Number(i + 1) +
-      ")' class='btn btn-danger'>Delete</button>";
-  }--total_entries;
+      ")' class='btn btn-danger'><i class='fa fa-trash'></i> Delete</button>";
+  }
+  --total_entries;
 }
