@@ -1,0 +1,36 @@
+Assignment - 1
+
+ Primary requirement - Page should be responsive.
+
+ Make a table having having 4 columns.
+
+ Structure:-
+
+	  1st Column - Serial Number
+	  2nd Column - Name Field
+	  3rd Column - Update ( Will hold Update Button )
+	  4th Column - Delete ( Will hold Delete Button ) 
+
+	  Add Button - To add a new Row to the table ( Light Blue Color )
+
+
+ Required Functionality:-
+
+	 1. Add Button - 	When you click on this button a new form ( #Main-Form ) should get open anywhere in the same page which contains a 
+		 				"Text Field" to get the name as input and Two buttons "okay" and "cancel", to submit this data into the table as a new row or to cancel
+                        the transaction respectively. After adding the row, the #Main-Form should get disappear.
+
+ 	 2. Update Button - When you click on this button the same form ( #Main-Form ) should get open with the pre-filled name in the Text Field from which the 
+                        update button has been clicked So that the user can update this name.
+                        After updating the row, the #Main-Form should get disappear.
+
+ 	 3. Delete Button - When you click this button, that particular row should get deleted from which Delete button has been clicked.
+
+ 	 4. The table should be Dynamic, It means adding a row should increase the size of the table and deleting a row should decrease the size of the table.
+
+
+ Good to Have:- 
+
+  	  1. Update and Delete icons in the place of a simple button in the Table.
+  	  2. Neat and clean Structure ( A Little bit Padding and Margin ).
+	  3. Try and use Bootstrap and media queries for CSS.
